@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <br>
+    <title>Search and Browse Video Game Titles</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<main class="page-shell">
+
+
+    <header class="topbar">
+        <a class="brand-mark" href="/">Home</a>
+        <nav class="site-nav" aria-label="Primary">
+            <a href="/">Search</a>
+            <a href="/favorites.html">Favorites</a>
+            <!--<a href="/login.html">Login</a>-->
+        </nav>
+    </header>
+
+    <section class="hero">
+        <p class="eyebrow">Discover</p>
+        <br>
+        <h1>Find Your Next Favorite Game</h1>
+        <br>
+        <p class="hero-copy">Use the search bar to look up a game by name, or browse the trending list below to see what is popular right now.</p>
+    </section>
+
+    <section class="search-panel">
+        <br>
+        <form id="search-form" class="search-form">
+            <label for="query" class="sr-only"></label>
+            <input id="query" name="query" type="text" placeholder="">
+            <button type="submit">Search</button>
+            <button id="show-trending" class="secondary-button hidden" type="button">Show Trending</button>
+        </form>
+    </section>
+
+    <section class="genre-bar-section">
+        <div id="genre-bar" class="genre-bar"></div>
+    </section>
+
+    <section class="results-header">
+        <div></div>
+    </section>
+
+    <section class="results-header">
+        <h2 id="results-title"></h2>
+        <br>
+    </section>
+
+    <section id="loading" class="loading hidden">
+        <div class="spinner" aria-hidden="true"></div>
+        <p>Loading games...</p>
+    </section>
+
+    <section id="error" class="error-state hidden">
+        <p id="error-message">Something went wrong while loading games.</p>
+        <button id="retry-btn" class="retry-btn" type="button">Try Again</button>
+    </section>
+
+    <section id="empty" class="empty-state hidden">
+        <p>No games found for "<span id="empty-query"></span>".</p>
+        <button id="clear-search-btn" class="secondary-button" type="button">Back to Trending</button>
+    </section>
+
+    <section id="games-grid" class="games-grid"></section>
+</main>
+
+<script src="/app.js"></script>
+</body>
+</html>

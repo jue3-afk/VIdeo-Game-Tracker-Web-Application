@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Details</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<main class="page-shell">
+    <header class="topbar">
+        <a class="brand-mark" href="/">Home</a>
+        <nav class="site-nav" aria-label="Primary">
+            <a href="/">Search</a>
+            <a href="/favorites.html">Favorites</a>
+            <!--<a href="/login.html">Login</a>-->
+        </nav>
+    </header>
+<section class="search-panel">
+        <br>
+        <form id="search-form" class="search-form">
+            <label for="query" class="sr-only"></label>
+            <input id="query" name="query" type="text" placeholder="">
+            <button type="submit">Search</button>
+        </form>
+    </section>
+
+    <section class="genre-bar-section">
+        <div id="genre-bar" class="genre-bar"></div>
+    </section>
+    
+    <br>
+    <section class="detail-shell">
+        <p class="eyebrow"></p>
+        <h1 id="game-title"></h1>
+        <p id="detail-status" class="status"></p>
+
+        <article id="detail-card" class="detail-card hidden">
+            <img id="detail-image" class="detail-image" alt="">
+            <div class="detail-content">
+                <div class="detail-head">
+                    <div>
+                        <p id="detail-meta" class="game-meta"></p>
+                        <p id="detail-genres" class="game-genres"></p>
+                    </div>
+                    <button id="favorite-toggle" class="secondary-button" type="button">Save Favorite</button>
+                </div>
+
+                <div class="detail-grid">
+                    <section class="detail-panel">
+                        <h2>Overview</h2>
+                        <p id="detail-description"></p>
+                    </section>
+
+                    <section class="detail-panel">
+                        <h2>Stats</h2>
+                        <dl class="stats-list">
+                            <div>
+                                <dt>Metacritic</dt>
+                                <dd id="detail-metacritic"></dd>
+                            </div>
+                            <div>
+                                <dt>Platforms</dt>
+                                <dd id="detail-platforms"></dd>
+                            </div>
+                            <div>
+                                <dt>Website</dt>
+                                <dd id="detail-website"></dd>
+                            </div>
+                            <div>
+                                <dt>Parent Games</dt>
+                                <dd id="detail-parent-games"></dd>
+                            </div>
+                        </dl>
+                    </section>
+                </div>
+            </div>
+        </article>
+    </section>
+</main>
+
+<script src="/game.js"></script>
+</body>
+</html>

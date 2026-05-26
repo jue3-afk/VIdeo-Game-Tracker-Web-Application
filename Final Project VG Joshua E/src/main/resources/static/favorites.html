@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Games</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+ <header class="topbar">
+        <a class="brand-mark" href="/">Home</a>
+        <nav class="site-nav" aria-label="Primary">
+            <a href="/">Search</a>
+            <a href="/favorites.html">Favorites</a>
+            <!--<a href="/login.html">Login</a>-->
+        </nav>
+    </header>
+    <br>
+    <section class="hero compact-hero">
+        <p class="eyebrow">Your Library</p>
+        <h1>Favorite Games</h1>
+        <br>
+        <p class="hero-copy">Saved Games</p>
+        <p id="favorites-status" class="status"></p>
+    </section>
+
+    <section id="favorites-results" class="games-grid"></section>
+</main>
+
+<template id="favorite-card-template">
+    <article class="game-card">
+        <div class="game-image-container">
+            <img class="game-image" alt="">
+        </div>
+        <div class="game-content">
+            <h2 class="game-title"></h2>
+            <p class="game-meta"></p>
+            <p class="game-genres"></p>
+            <div class="game-actions">
+                <a class="details-link favorite-link" href="#">Open Details</a>
+                <button class="favorite-btn favorite-button" type="button">Remove Favorite</button>
+            </div>
+        </div>
+    </article>
+</template>
+
+<script src="/favorites.js"></script>
+</body>
+</html>
